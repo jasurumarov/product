@@ -5,10 +5,10 @@ $('.owl-carousel').owlCarousel({
         0: {
             items: 1,
         },
-        600: {
+        714: {
             items: 2,
         },
-        1000: {
+        1085: {
             items: 3,
         },
     },
@@ -40,3 +40,11 @@ function toggleBacktop() {
     backtop.style.bottom = '-60px';
   }
 }
+
+// HEADER BURGER MENU /////////////////////////
+
+const menuBtn = document.querySelector(".menu-btn");
+
+menuBtn.addEventListener("click", function () {
+    document.body.classList.toggle("menu-opened")
+});
