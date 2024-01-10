@@ -1,0 +1,822 @@
+@font-face {
+  font-family: Poppins;
+  src: url("../fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: Poppins500;
+  src: url("../fonts/Poppins-SemiBold.ttf");
+}
+@font-face {
+  font-family: Poppins600;
+  src: url("../fonts/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: Poppins700;
+  src: url("../fonts/Poppins-Bold.ttf");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+  font-style: normal;
+}
+
+body, header {
+  transition: 0.2s linear;
+}
+
+.container {
+  max-width: 1140px;
+  padding: 0 17px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input {
+  outline: none;
+}
+
+.dark {
+  background: #121520;
+}
+.dark * {
+  color: white !important;
+}
+.dark header {
+  background: #121520 !important;
+}
+.dark header .sign-up-btn:hover {
+  background: #173A56 !important;
+  border: 1px solid #173A56 !important;
+}
+.dark main .hero-section button:hover {
+  background: #173A56 !important;
+  border: 1px solid #173A56 !important;
+}
+.dark main .product-section {
+  background: none !important;
+}
+.dark main .product-section button:hover {
+  background: #173A56 !important;
+  border: 1px solid #173A56 !important;
+}
+.dark main .process-section {
+  background: none !important;
+}
+.dark main .process-section button:hover {
+  background: #173A56 !important;
+  border: 1px solid #173A56 !important;
+}
+.dark main .pricing-section {
+  background: none !important;
+}
+.dark main .pricing-section .pricing-card {
+  background: #173A56 !important;
+}
+.dark main .pricing-section .pricing-card:hover {
+  background: #22343D !important;
+}
+.dark main .pricing-section .pricing-card:hover button {
+  color: #02897A;
+  background: #173A56 !important;
+}
+.dark main .pricing-section .pricing-card:hover .pricing-fee h4 {
+  color: #02897A !important;
+}
+.dark main .pricing-section .pricing-card:hover .pricing-fee .pricing-fee-time h5 {
+  color: #02897A !important;
+}
+.dark main .pricing-section .pricing-card:hover .pricing-fee .pricing-fee-time p {
+  color: #7f7070 !important;
+}
+.dark main .clients-section .clients-card {
+  border: 1px solid #173A56 !important;
+  background: #173A56 !important;
+}
+.dark main .clients-section .clients-card .clients-card-profile-name {
+  color: #02897A !important;
+}
+.dark main .item {
+  border: 1px solid #173A56 !important;
+  background: #173A56 !important;
+}
+.dark footer .footer-top button {
+  border: 1px solid #173A56 !important;
+  background: #173A56 !important;
+  cursor: pointer;
+}
+.dark footer .footer-top button:hover {
+  background: #22343D !important;
+}
+.dark footer .footer-bottom input {
+  background: #173A56 !important;
+}
+.dark footer .footer-bottom button:hover {
+  background: #173A56 !important;
+  border: 1px solid #173A56 !important;
+}
+
+body header {
+  padding: 19px 0;
+  background: #FFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+body header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body header nav .site-icon {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+body header nav .site-icon span {
+  color: #173A56;
+  font-size: 30px;
+  font-family: Poppins700;
+  line-height: 28px;
+}
+body header nav .nav-list {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+body header nav .nav-list a {
+  color: #22343D;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  transition: all 0.5s linear;
+}
+body header nav .nav-list a:hover {
+  color: #000;
+  font-size: 16.3px;
+  font-weight: 400;
+  line-height: 28px;
+}
+body header nav .nav-list .nav-listItem-link1 {
+  width: 62.5px;
+}
+body header nav .nav-list .nav-listItem-link2 {
+  width: 88px;
+}
+body header nav .nav-list .nav-listItem-link3 {
+  width: 54px;
+}
+body header nav .nav-list .nav-listItem-link4 {
+  width: 82px;
+}
+body header nav .nav-list .sign-in-btn {
+  border-radius: 4px;
+  border: 1px solid #BCD0E5;
+  padding: 10px 24px;
+  background: transparent;
+  cursor: pointer;
+  color: #173A56;
+  font-family: Poppins600;
+  font-size: 16px;
+  transition: 0.3s;
+}
+body header nav .nav-list .sign-in-btn:hover {
+  border: 1px solid #173A56;
+  background: #173A56;
+  color: #FFF;
+}
+body header nav .nav-list .sign-up-btn {
+  border-radius: 4px;
+  border: 1px solid #02897A;
+  background: #02897A;
+  padding: 10px 24px;
+  cursor: pointer;
+  color: #FFF;
+  font-family: Poppins600;
+  font-size: 16px;
+  transition: 0.3s;
+}
+body header nav .nav-list .sign-up-btn:hover {
+  color: #02897A;
+  background: #FFF;
+}
+body header nav .nav-list .dark-light {
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+body main .hero-section {
+  margin: 120px 0;
+}
+body main .hero-section-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body main .hero-section-content .hero-left {
+  max-width: 445px;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+body main .hero-section-content .hero-left-title {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+body main .hero-section-content .hero-left-title h1 {
+  color: #22343D;
+  font-family: Poppins700;
+  font-size: 41px;
+  line-height: 60px;
+}
+body main .hero-section-content .hero-left-title p {
+  color: #22343D;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+}
+body main .hero-section-content .hero-left-btnGroup {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+body main .hero-section-content .hero-left-btnGroup button {
+  border-radius: 4px;
+  border: 1px solid #02897A;
+  background: #02897A;
+  padding: 15px 40px;
+  color: #FFF;
+  font-family: Poppins700;
+  font-size: 16px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+body main .hero-section-content .hero-left-btnGroup button:hover {
+  color: #02897A;
+  background: #fff;
+}
+body main .hero-section-content .hero-left-btnGroup div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+body main .hero-section-content .hero-left-btnGroup div a {
+  color: #02897A;
+  font-family: Poppins600;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration-line: underline;
+  transition: 0.2s;
+}
+body main .hero-section-content .hero-left-btnGroup div a:hover {
+  color: #335e59;
+}
+body main .product-section {
+  padding-bottom: 260px;
+  background: url("../images/main/product-bg.svg");
+  background-repeat: no-repeat;
+  background-position: center bottom 120px;
+}
+body main .product-section-content h2 {
+  max-width: 539px;
+  margin: 0 auto;
+  margin-bottom: 66px;
+  color: #22343D;
+  text-align: center;
+  font-family: Poppins700;
+  font-size: 32px;
+}
+body main .product-section-content .product-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 34px;
+}
+body main .product-section-content .product-cards .product-card {
+  max-width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+body main .product-section-content .product-cards .product-card .product-icon {
+  height: 50px;
+}
+body main .product-section-content .product-cards .product-card-title {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+body main .product-section-content .product-cards .product-card-title h1 {
+  color: #22343D;
+  font-family: Poppins600;
+  font-size: 22px;
+}
+body main .product-section-content .product-cards .product-card-title p {
+  color: #22343D;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+body main .product-section-content .product-btn {
+  text-align: center;
+}
+body main .product-section-content .product-btn button {
+  border-radius: 4px;
+  border: 1px solid #02897A;
+  background: #02897A;
+  padding: 16px 32px;
+  color: #FFF;
+  font-family: Poppins700;
+  font-size: 16px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+body main .product-section-content .product-btn button:hover {
+  color: #02897A;
+  background: #fff;
+}
+body main .resources-section-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 150px;
+}
+body main .resources-section-content .resources-left {
+  max-width: 486px;
+}
+body main .resources-section-content .resources-left h4 {
+  color: #22343D;
+  font-family: Poppins600;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+body main .resources-section-content .resources-left h2 {
+  color: #22343D;
+  font-family: Poppins700;
+  font-size: 32px;
+  margin-bottom: 23px;
+}
+body main .resources-section-content .resources-left p {
+  color: #22343D;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 30px;
+}
+body main .resources-section-content .resources-left .resources-last-par {
+  margin-bottom: 0;
+}
+body main .resources-section-content .resources-left .resources-second-par {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+body main .resources-section-content .resources-left h5 {
+  color: #22343D;
+  font-family: Poppins600;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 12px;
+}
+body main .process-section {
+  padding-top: 52px;
+  margin-bottom: 150px;
+  background: url("../images/main/procces-bg.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+body main .process-section-content h2 {
+  color: #22343D;
+  text-align: center;
+  font-family: Poppins700;
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+body main .process-section-content p {
+  max-width: 542px;
+  margin: 0 auto;
+  color: #22343D;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 32px;
+}
+body main .process-section-content .process-commentGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+body main .process-section-content .process-commentGroup .process-comments {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 191px;
+  margin: 0 auto;
+}
+body main .process-section-content .process-btn {
+  text-align: center;
+}
+body main .process-section-content .process-btn button {
+  border-radius: 6px;
+  background: #02897A;
+  border: 1px solid #02897A;
+  padding: 15px 30px;
+  color: #FFF;
+  font-family: Poppins700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+body main .process-section-content .process-btn button:hover {
+  color: #02897A;
+  background: #fff;
+}
+body main .contents-section {
+  margin-bottom: 150px;
+}
+body main .contents-section-content h1 {
+  color: #22343D;
+  font-family: Poppins700;
+  font-size: 34px;
+  margin-bottom: 8px;
+}
+body main .contents-section-content .contents-desc {
+  color: #22343D;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  margin-bottom: 33px;
+}
+body main .contents-section-content .item {
+  max-width: 348px;
+  border-radius: 8px;
+  border: 1px solid #DEDEDE;
+  background: #FFF;
+}
+body main .contents-section-content .item:hover h2 {
+  transition: 0.2s;
+  color: #02897A;
+}
+body main .contents-section-content .item-title {
+  padding: 24px 24px 40px 24px;
+}
+body main .contents-section-content .item-title p {
+  color: #22343D;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-bottom: 12px;
+}
+body main .contents-section-content .item-title p span {
+  font-family: Poppins700;
+  font-size: 16px;
+  line-height: 28px;
+}
+body main .contents-section-content .item-title h2 {
+  color: #22343D;
+  font-family: Poppins700;
+  font-size: 24px;
+  line-height: 34px;
+}
+body main .contents-section-content .owl-dots {
+  margin-top: 64px !important;
+}
+body main .pricing-section {
+  margin-bottom: 150px;
+}
+body main .pricing-section-content h2 {
+  color: #22343D;
+  font-family: Poppins700;
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+body main .pricing-section-content .pricing-desc {
+  color: #22343D;
+  font-family: Poppins500;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+body main .pricing-section-content .pricing-cardsGroup {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+body main .pricing-section-content .pricing-cardsGroup .pricing-card {
+  padding: 24px 74px 32px 74px;
+  border-radius: 8px;
+  background: #FFF;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+body main .pricing-section-content .pricing-cardsGroup .pricing-card:hover {
+  background: #02897A;
+}
+body main .pricing-section-content .pricing-cardsGroup .pricing-card:hover h3 {
+  color: #FFF;
+}
+body main .pricing-section-content .pricing-cardsGroup .pricing-card:hover .pricing-card-desc {
+  color: #FFF;
+}
+body main .pricing-section-content .pricing-cardsGroup .pricing-card:hover .pricing-fee h4 {
+  color: #FFF;
+}
+body main .pricing-section-content .pricing-cardsGroup .pricing-card:hover .pricing-fee .pricing-fee-time h5 {
+  color: #FFF;
+}
+body main .pricing-section-content .pricing-cardsGroup .pricing-card:hover .pricing-fee .pricing-fee-time p {
+  color: #E0E0E0;
+}
+body main .pricing-section-content .pricing-cardsGroup .pricing-card:hover p {
+  color: #FFF;
+}
+body main .pricing-section-content .pricing-cardsGroup .pricing-card:hover .button button {
+  color: #02897A;
+  background: #FFF;
+}
+body main .pricing-section-content .pricing-cardsGroup .pricing-card h3 {
+  color: #22343D;
+  font-family: Poppins700;
+  font-size: 24px;
+  line-height: 40px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+body main .pricing-section-content .pricing-cardsGroup .pricing-card .pricing-card-desc {
+  color: #22343D;
+  font-size: 16px;
+  line-height: 40px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+body main .pricing-section-content .pricing-cardsGroup .pricing-card .pricing-fee {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+body main .pricing-section-content .pricing-cardsGroup .pricing-card .pricing-fee h4 {
+  color: #02897A;
+  text-align: center;
+  font-family: Poppins700;
+  font-size: 76px;
+  line-height: 100px;
+  letter-spacing: 0.2px;
+}
+body main .pricing-section-content .pricing-cardsGroup .pricing-card .pricing-fee .pricing-fee-time {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+body main .pricing-section-content .pricing-cardsGroup .pricing-card .pricing-fee .pricing-fee-time h5 {
+  color: #02897A;
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 30px;
+  letter-spacing: 0.1px;
+}
+body main .pricing-section-content .pricing-cardsGroup .pricing-card .pricing-fee .pricing-fee-time p {
+  color: #AFAFAF;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0.1px;
+}
+body main .pricing-section-content .pricing-cardsGroup .pricing-card p {
+  color: #22343D;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0.2px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+body main .pricing-section-content .pricing-cardsGroup .pricing-card .button {
+  display: flex;
+  justify-content: center;
+}
+body main .pricing-section-content .pricing-cardsGroup .pricing-card .button button {
+  margin-top: 22px;
+  border-radius: 8px;
+  background: #02897A;
+  border: none;
+  padding: 11px 19px 11px 18px;
+  color: #FFF;
+  font-family: Poppins600;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+body main .clients-section {
+  margin-bottom: 160px;
+}
+body main .clients-section-content h2 {
+  color: #22343D;
+  font-family: Poppins700;
+  font-size: 34px;
+  line-height: 57px;
+  letter-spacing: 0.2px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+body main .clients-section-content .clients-desc {
+  color: #22343D;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  margin-bottom: 50px;
+}
+body main .clients-section-content .clients-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+body main .clients-section-content .clients-cards .clients-card {
+  max-width: 327px;
+  padding: 28px 26px 24px 26px;
+  border-radius: 5px;
+  border: 1px solid #DEDEDE;
+  background: #FFF;
+}
+body main .clients-section-content .clients-cards .clients-card .clients-card-desc {
+  margin: 16px 0;
+  color: #737373;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+}
+body main .clients-section-content .clients-cards .clients-card-profile {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+body main .clients-section-content .clients-cards .clients-card-profile-names .clients-card-profile-name {
+  color: #02897A;
+  font-family: Poppins600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+}
+body main .clients-section-content .clients-cards .clients-card-profile-names p {
+  color: #252B42;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+}
+body footer .footer-top {
+  margin-bottom: 150px;
+  padding: 14px 36px 0 50px;
+  border-radius: 32px;
+  background: #02897A;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+body footer .footer-top-first {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+body footer .footer-top-first h2 {
+  max-width: 450px;
+  color: #FFF;
+  font-family: Poppins600;
+  font-size: 32px;
+  line-height: 151.4%;
+}
+body footer .footer-top-first .button button {
+  padding: 10px 35px 10px 33px;
+  border-radius: 8px;
+  border: 1px solid #FFF;
+  background: #FFF;
+  color: #02897A;
+  font-family: Poppins600;
+  font-size: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+body footer .footer-top-first .button button:hover {
+  color: #FFF;
+  background-color: #02897A;
+  background: #335e59;
+}
+body footer .footer-bottom {
+  margin-bottom: 46px;
+}
+body footer .footer-bottom-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+body footer .footer-bottom-content .footer-bottom-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+body footer .footer-bottom-content .footer-bottom-icon-social {
+  display: flex;
+  gap: 16px;
+}
+body footer .footer-bottom-content .footer-bottom-icon .site-icon {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+body footer .footer-bottom-content .footer-bottom-icon .site-icon span {
+  color: #173A56;
+  font-family: Poppins700;
+  font-size: 30px;
+  line-height: 28px;
+}
+body footer .footer-bottom-content .footer-bottom-second {
+  max-width: 352px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+body footer .footer-bottom-content .footer-bottom-second ul {
+  list-style-type: none;
+}
+body footer .footer-bottom-content .footer-bottom-second ul p {
+  color: #22343D;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+}
+body footer .footer-bottom-content .footer-bottom-second ul a {
+  color: #22343D;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 35px;
+  transition: 0.2s;
+}
+body footer .footer-bottom-content .footer-bottom-second ul a:hover {
+  color: #000;
+}
+body footer .footer-bottom-content .footer-bottom-last p {
+  max-width: 280px;
+  color: #22343D;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-bottom: 34px;
+}
+body footer .footer-bottom-content .footer-bottom-last input {
+  border-radius: 4px;
+  border: 1px solid #BCD0E5;
+  background: #FFF;
+  padding: 10px 15px;
+  color: #22343D;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-bottom: 21px;
+}
+body footer .footer-bottom-content .footer-bottom-last button {
+  padding: 8px 16px;
+  display: block;
+  border-radius: 4px;
+  border: 1px solid #02897A;
+  background: #02897A;
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins700;
+  font-size: 16px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+body footer .footer-bottom-content .footer-bottom-last button:hover {
+  color: #02897A;
+  background: #FFF;
+}
+body footer .footer-bottom .last-par {
+  color: #22343D;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
