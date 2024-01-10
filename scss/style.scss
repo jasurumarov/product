@@ -25,6 +25,7 @@ $btn-color: #02897A;
     box-sizing: border-box;
     font-family: Poppins;
     font-style: normal;
+    scroll-behavior: smooth;
 }
 
 body, header {
@@ -885,5 +886,23 @@ body {
                 text-align: center; 
             }
         }
+
+        // BACKTOP ///////////////
+
+    }
+    
+    #backtop {
+        position: fixed !important;
+        right: 2%;
+        bottom: 2%;
+        background: #FFF;
+        padding: 15px;
+        border-radius: 50%;
+        -webkit-box-shadow: 4px 4px 12px 2px rgba(0, 0, 0, 0.2);
+                box-shadow: 4px 4px 12px 2px rgba(0, 0, 0, 0.2);
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s;
+        z-index: 9;
     }
 }
