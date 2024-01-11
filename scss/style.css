@@ -49,7 +49,7 @@ input {
   color: white !important;
 }
 .dark header {
-  background: #121520 !important;
+  background: #22343D !important;
 }
 .dark header .sign-up-btn:hover {
   background: #173A56 !important;
@@ -122,11 +122,16 @@ input {
   border: 1px solid #173A56 !important;
 }
 
+.navbar-shrink {
+  padding: 15px 0 !important;
+}
+
 body {
   transition: 0.3s;
 }
 body header {
-  padding: 19px 0;
+  transition: 0.3s;
+  padding: 25px 0;
   background: #FFF;
   position: fixed;
   top: 0;
