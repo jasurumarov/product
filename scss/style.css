@@ -308,6 +308,7 @@ body main .product-section {
   background: url("../images/main/product-bg.svg");
   background-repeat: no-repeat;
   background-position: center bottom 120px;
+  background-size: cover;
 }
 body main .product-section-content h2 {
   max-width: 539px;
@@ -416,6 +417,7 @@ body main .process-section {
   background: url("../images/main/procces-bg.png");
   background-repeat: no-repeat;
   background-position: center top;
+  background-size: cover;
 }
 body main .process-section-content h2 {
   color: #22343D;
